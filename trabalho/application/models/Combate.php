@@ -40,6 +40,28 @@ class Combate{
     }
     
     /*
+    * DESCR: O método verificarAlcance() retorna um booleano indicando
+    * se o ataque da arma chega até o jogador inimigo ou não
+    * AUTOR: Daniel Pereira Zitei
+    * HORAS: 3
+    * ENTRADA: Jogador de ataque, Jogador de Defesa
+    * SAÍDA: Booleano
+    */
+    public function verificarAlcance(Jogador $jogadorAtaque, Jogador $jogadorDefesa){
+        $posAtaque = $jogadorAtaque->getPosicaoAtu2al();
+        $posDefesa = $jogadorDefesa->getPosicaoAtual();
+        $alcance = $jogadorAtaque->inventario["arma"]->alcance;
+
+        if((($posAtaque["y"] + $alcance) <= $posDefesa["y"]) && (($posAtaque["y"] - $alcance) >= $posDefesa["y"]) && ($posAtaque["x"] >= $posDefesa["x"])){
+            return true;
+        }
+        if((($posAtaque["x"] + $alcance) >= $posDefesa["x"]) && (($posAtaque["x"] - $alcance) <= $posDefesa["x"])&& ($posAtaque["y"] >= $posDefesa["y"])){
+            return true;
+        }
+        return false;
+    }
+    
+    /*
     * DESCR: O método atacar() ataca o outro jogador.
     * Primeiro é chamado o método verificarAlcance(), se for verdadeiro,
     * o método combater do jogador é chamado e lá é feito realmente o ataque, 
