@@ -1,0 +1,25 @@
+*{
+        font-family: 'Autour One', cursive;
+    }
+    #entrar{
+         width: 300px;
+         border: 1px solid black;
+         padding: 100px;
+         background-color: #4682B4;
+         position: absolute;
+         margin-left: -250px;
+         left:50%;
+         margin-top: -236.5px;
+         top:50%;
+    }
+    h1{
+        text-align: center;
+    }
+    label{
+        margin:20px;
+        display:block;
+    }
+    #btnEntrar, select{
+        margin:5px 20px;
+        display:block;
+    }
