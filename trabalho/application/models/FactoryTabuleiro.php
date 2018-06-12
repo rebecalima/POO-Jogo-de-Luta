@@ -48,6 +48,24 @@ class FactoryTabuleiro{
         }
     }
     
+    /*
+    * DESCR: O método verificaObstaculo() tem a função de não permitir que 
+    * um novo obstaculo seja criado em cima de uma posição que ja existe obstaculo
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 3
+    * ENTRADA: Posicao rendomica x, Posicao randomica y, Quantidade de celulas na reta X, Quantidade de celulas na reta Y
+    * SAÍDA: Booleano
+    */
+    public static function verificaObstaculo($x, $y, $obstaculoX, $obstaculoY){
+        for($i = 0; $i < count(self::$obstaculoX);$i++){
+            if(self::$obstaculoX[$i] == $x && self::$obstaculoY[$i] == $y){
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
 }
 
 ?>
