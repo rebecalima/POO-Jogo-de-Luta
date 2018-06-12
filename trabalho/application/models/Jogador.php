@@ -40,3 +40,46 @@ abstract class Jogador{
         $msg = $jogadorDefesa ." MORREU!";
         return $msg;
     }
+    
+        /*
+    * DESCR: O método getVida() retorna a vida total(original) do jogador
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 1
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Vida
+    */
+    public function getVida(){
+        return $this->vidaTotal;
+    }
+    
+    /*
+    * DESCR: O método geNome() retorna o nome do jogador
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 1
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Nome
+    */
+    public function getNome(){
+        return $this->nome;
+    }
+    
+    /*
+    * DESCR: O método getVida() retorna a posição atual do jogador no tabuleiro
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 1
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Posição atual
+    */
+    public function getPosicaoAtual(){
+        return $this->posicaoAtual;
+    }
+    
+        /*
+    * DESCR: O método abstrato getJogador() está somente assinado nessa classe
+    *  e será sobrescrito nas classes filhas retornando os detalhes do jogador
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 1
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: S/SAÍDA
+    */
+    public abstract function getJogador();
