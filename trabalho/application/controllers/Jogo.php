@@ -39,6 +39,48 @@ class Jogo extends CI_Controller{
         $this->criarJogador($personagem1,$personagem2);
         
     } 
+    
+    /*
+    * DESCR: O método criarJogador() entra com 2 personagens recebidos da classe index
+    * valida qual o personagem o jogador escolheu e constrói a classe conforme a validação, salva numa session os jogadores e
+    * chama a função tabuleiro
+    * AUTOR: Daniel Pereira Zitei
+    * HORAS: 2
+    * ENTRADA:Personagem 1, Personagem 2
+    * SAÍDA:
+    */
+    
+    public function criarJogador($personagem1, $personagem2){
+        $nome1 = $this->session->userdata("nome1");
+        $nome2 = $this->session->userdata("nome2");
+        $morningStar = $this->session->userdata("morningStar");
+        $armaduraFogo = $this->session->userdata("armaduraFogo");
+        $armaduraGelo = $this->session->userdata("armaduraGelo");
+        $excalibur = $this->session->userdata("excalibur");
+        $escudo = $this->session->userdata("escudo");
+        $cajado = $this->session->userdata("cajado");
+        
+        if($personagem1 == "warrior"){
+            $jogador1 = new Warrior($nome1, $morningStar, $armaduraFogo, $escudo);
+        }else if($personagem1 == "assassino"){
+            $jogador1 = new Assassino($nome1, $excalibur, $excalibur, $armaduraGelo);
+        }else if($personagem1 == "mago"){
+            $jogador1 = new Mago($nome1, $cajado, $armaduraFogo, $escudo);
+        }
+        
+        if($personagem2 == "warrior"){
+            $jogador2 = new Warrior($nome2, $morningStar, $armaduraFogo, $escudo);
+        }else if($personagem2 == "assassino"){
+            $jogador2 = new Assassino($nome2, $excalibur, $excalibur, $armaduraGelo);
+        }else if($personagem2 == "mago"){
+            $jogador2 = new Mago($nome1, $cajado, $armaduraFogo, $escudo);
+        }
+        
+        $this->session->set_userdata("jogador1", $jogador1);
+        $this->session->set_userdata("jogador2", $jogador2);
+        
+        $this->tabuleiro();
+    }
 }
 
 ?>
