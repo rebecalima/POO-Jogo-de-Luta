@@ -118,6 +118,66 @@ class Tabuleiro{
         }
     }
     
+        /*
+    * DESCR: O método getArrayCelulas() retorna o array de instâncias das celulas
+    * com suas respectivas posições
+    * AUTOR: 
+    * HORAS: --
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Array de celulas
+    */
+    public function getArrayCelulas(){
+        return $this->arrayCelulas;
+    }
+    
+    /*
+    * DESCR: O método getObstaculoX() retorna o array de instâncias das celulas
+    * com suas respectivas posições na reta X
+    * AUTOR: 
+    * HORAS: --
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Array de obstaculo na posição X
+    */
+    public function getObstaculoX(){
+        return $this->obstaculoX;
+    }
+    
+    /*
+    * DESCR: O método getObstaculoY() retorna o array de instâncias das celulas
+    * com suas respectivas posições na reta Y
+    * AUTOR: 
+    * HORAS: --
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Array de obstaculo na posição Y
+    */
+    public function getObstaculoY(){
+        return $this->obstaculoY;
+    }
+    
+    /*
+    * DESCR: O método getLimiteX() retorna o limite de criação de celula
+    * na reta X passado para o parametro
+    * AUTOR: 
+    * HORAS: --
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Quantidade de celula na reta X
+    */
+    public function getLimiteX(){
+        return $this->limiteX;
+    }
+    
+    /*
+    * DESCR: O método getLimiteY() retorna o limite de criação de celula
+    * na reta X passado para o parametro
+    * AUTOR: 
+    * HORAS: --
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Quantidade de celula na reta Y
+    */
+    public function getLimiteY(){
+        return $this->limiteY;
+    }
+    
     
 }
 
