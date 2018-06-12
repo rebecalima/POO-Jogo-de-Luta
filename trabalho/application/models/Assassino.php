@@ -48,5 +48,20 @@ class Assassino extends Jogador{
         $dano = $ataque - $defesa;
         $this->vidaAtual = $this->registrarDano($dano, $jogadorDefesa, $this->vidaAtual);
     }
+    
+        /*
+    * DESCR: O método getJogador() retorna todos os dados dos atributos em um array
+    * AUTOR: Daniel Pereira Zitei
+    * HORAS: 1
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Array de informações
+    */
+    public function getJogador(){
+        $informacoes = array();
+        $informacoes["nome"] = $this->nome;
+        $informacoes["posicao"] = $this->getPosicaoAtual();
+        $informacoes["elemento"] = "<div id='$this->nome' style='width: 30px; height: 30px; padding:5px; border-radius: 50%; background-color:black; color:white; font-size:9px;'>$this->nome</div>";
+        return $informacoes;
+    }
 }  
 ?>
