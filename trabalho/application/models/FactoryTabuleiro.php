@@ -92,6 +92,19 @@ class FactoryTabuleiro{
         return true;
     }
     
+    /*
+    * DESCR: O método getArrayCelulas() retorna o array com as posições 
+    * das celulas e as instâncias
+    * AUTOR: 
+    * HORAS: --
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Array de Células
+    */
+    public static function getArrayCelulas(){
+        return self::$arrayCelulas;
+    }
+
+    
 }
 
 ?>
