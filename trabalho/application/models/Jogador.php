@@ -81,6 +81,22 @@ abstract class Jogador{
 
     }
     
+    /*
+    * DESCR: O método movimentarEsquerda() tem a função de movimentar 
+    * o objeto jogador para o lado esquerdo da posição atual em que ele está,
+    * essa função chama outra chamada movimentar()
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 3
+    * ENTRADA: Array de obstáculos na posição X, Array de obstáculos na posição Y
+    * SAÍDA: S/SAÍDA
+    */
+    public function movimentarEsquerda($ObX, $ObY){
+        $novaPosicao = array();
+        $novaPosicao["x"] = $this->posicaoAtual["x"];
+        $novaPosicao["y"] = $this->posicaoAtual["y"] - 1;
+        $this->movimentar($novaPosicao, $ObX, $ObY);
+    }
+    
         /*
     * DESCR: O método getVida() retorna a vida total(original) do jogador
     * AUTOR: Nathan Caraviello Couto
