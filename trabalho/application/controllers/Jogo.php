@@ -82,6 +82,14 @@ class Jogo extends CI_Controller{
         $this->tabuleiro();
     }
     
+    /*
+    * DESCR: O método mover() recebe o método post da tela, valida a string recebida e chama a controller desejada
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 2
+    * ENTRADA:
+    * SAÍDA:
+    */
+    
     public function mover(){
         
         $this->autoload();
@@ -97,6 +105,21 @@ class Jogo extends CI_Controller{
                 //$jogador->movimentarBaixo();
             }
         }
+    }
+    
+    /*
+    * DESCR: O método tabuleiro() chama a classe do model e constrói o tabuleiro na tela dentro de uma session
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 2
+    * ENTRADA:
+    * SAÍDA:
+    */
+    
+    public function tabuleiro(){
+        $tabuleiro = FactoryTabuleiro::makeTabuleiro($this->session->userdata("jogador1"), $this->session->userdata("jogador2"));
+        $this->session->set_userdata("tabuleiro", $tabuleiro);
+        $data["tabuleiro"] = $tabuleiro;
+        $this->load->view("jogo", $data);
     }
 }
 
