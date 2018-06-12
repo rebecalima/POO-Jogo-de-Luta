@@ -121,6 +121,10 @@ class Jogo extends CI_Controller{
         $data["tabuleiro"] = $tabuleiro;
         $this->load->view("jogo", $data);
     }
+    
+    public function combater($jogador1,$jogador2){
+        //new Combate($jogador1,$jogador2);
+    }
 }
 
 ?>
