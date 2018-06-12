@@ -95,8 +95,8 @@ class FactoryTabuleiro{
     /*
     * DESCR: O método getArrayCelulas() retorna o array com as posições 
     * das celulas e as instâncias
-    * AUTOR: 
-    * HORAS: --
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 1
     * ENTRADA: S/ENTRADA
     * SAÍDA: Array de Células
     */
