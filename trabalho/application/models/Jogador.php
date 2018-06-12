@@ -117,8 +117,8 @@ abstract class Jogador{
     * DESCR: O método movimentarBaixo() tem a função de movimentar 
     * o objeto jogador para baixo da posição atual em que ele está,
     * essa função chama outra chamada movimentar()
-    * AUTOR: 
-    * HORAS: --
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 3
     * ENTRADA: Array de obstáculos na posição X, Array de obstáculos na posição Y
     * SAÍDA: S/SAÍDA
     */
@@ -127,6 +127,23 @@ abstract class Jogador{
         $novaPosicao["x"] = $this->posicaoAtual["x"] + 1;
         $novaPosicao["y"] = $this->posicaoAtual["y"];
         $this->movimentar($novaPosicao, $ObX, $ObY);
+    }
+    
+    /*
+    * DESCR: O método movimentar tem a função de movimentar 
+    * o objeto jogador para o lado em que foi solicitado anteriormente.
+    * Antes do movimento é chamado o método validarMovimento()
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 3
+    * ENTRADA: Posicao solicitada, Array de obstáculos na posição X, Array de obstáculos na posição Y
+    * SAÍDA: S/SAÍDA
+    */
+    public function movimentar($novaPosicao, $ObX, $ObY){
+        //var_dump($ObX);
+        if($this->validarMovimento($novaPosicao, $ObX, $ObY)){
+            $this->posicaoAtual["x"] = $novaPosicao["x"];
+            $this->posicaoAtual["y"] = $novaPosicao["y"];
+        }
     }
     
         /*
