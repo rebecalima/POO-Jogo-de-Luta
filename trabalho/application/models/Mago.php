@@ -19,5 +19,18 @@ class Mago extends Jogador{
         $this->inventario["armadura"] = $armadura;
         $this->inventario["escudo"] = $escudo;
     }
+    
+        /*
+    * DESCR: O método combater() é chamado pela classe combate após uma ação 
+    * do usuário contra o adversário. É retornado o ataque da arma
+    * AUTOR: Daniel Pereira Zitei
+    * HORAS: 1
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Ataque da arma
+    */
+    public function combater(){
+        $somaAtaque = $this->inventario["arma"]->ataque;
+        return $somaAtaque;
+    }
 }
 ?>
