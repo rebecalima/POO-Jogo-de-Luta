@@ -81,6 +81,23 @@ class Jogo extends CI_Controller{
         
         $this->tabuleiro();
     }
+    
+    public function mover(){
+        
+        $this->autoload();
+        
+        if($_POST['jogador'] == "jogador1"){
+            if($_POST['movimento'] == "direita"){
+                $this->session->userdata("jogador1")->movimentarDireita($this->session->userdata("tabuleiro")->getObstaculoX(), $this->session->userdata("tabuleiro")->getObstaculoY());                
+            }else if($_POST['movimento'] == "esquerda"){
+                $this->session->userdata("jogador1")->movimentarEsquerda($this->session->userdata("tabuleiro")->getObstaculoX(), $this->session->userdata("tabuleiro")->getObstaculoY());                
+            }else if($_POST['movimento'] == "cima"){
+                //$jogador->movimentarCima();
+            }else if($_POST['movimento'] == "baixo"){
+                //$jogador->movimentarBaixo();
+            }
+        }
+    }
 }
 
 ?>
