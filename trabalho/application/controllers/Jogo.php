@@ -125,6 +125,29 @@ class Jogo extends CI_Controller{
     public function combater($jogador1,$jogador2){
         //new Combate($jogador1,$jogador2);
     }
+    
+        /*
+    * DESCR: O método autoload() carrega os models de fora do ci_model
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 2
+    * ENTRADA:
+    * SAÍDA:
+    */
+    
+    public function autoload() {
+        require_once APPPATH."/models/Espada.php";
+        require_once APPPATH."/models/Cajado.php";
+        require_once APPPATH."/models/Escudo.php";
+        require_once APPPATH."/models/Armadura.php";
+        require_once APPPATH."/models/Warrior.php";
+        require_once APPPATH."/models/Assassino.php";
+        require_once APPPATH."/models/Mago.php";
+        require_once APPPATH."/models/FactoryTabuleiro.php";
+        require_once APPPATH."/models/Tabuleiro.php";
+        require_once APPPATH."/models/Combate.php";  
+        require_once APPPATH."/models/Terreno.php";
+        require_once APPPATH."/models/Obstaculo.php";
+    }
 }
 
 ?>
