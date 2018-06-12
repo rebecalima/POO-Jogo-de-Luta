@@ -121,8 +121,8 @@ class Tabuleiro{
         /*
     * DESCR: O método getArrayCelulas() retorna o array de instâncias das celulas
     * com suas respectivas posições
-    * AUTOR: 
-    * HORAS: --
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 1
     * ENTRADA: S/ENTRADA
     * SAÍDA: Array de celulas
     */
@@ -133,8 +133,8 @@ class Tabuleiro{
     /*
     * DESCR: O método getObstaculoX() retorna o array de instâncias das celulas
     * com suas respectivas posições na reta X
-    * AUTOR: 
-    * HORAS: --
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 1
     * ENTRADA: S/ENTRADA
     * SAÍDA: Array de obstaculo na posição X
     */
@@ -145,8 +145,8 @@ class Tabuleiro{
     /*
     * DESCR: O método getObstaculoY() retorna o array de instâncias das celulas
     * com suas respectivas posições na reta Y
-    * AUTOR: 
-    * HORAS: --
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 1
     * ENTRADA: S/ENTRADA
     * SAÍDA: Array de obstaculo na posição Y
     */
@@ -157,8 +157,8 @@ class Tabuleiro{
     /*
     * DESCR: O método getLimiteX() retorna o limite de criação de celula
     * na reta X passado para o parametro
-    * AUTOR: 
-    * HORAS: --
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 1
     * ENTRADA: S/ENTRADA
     * SAÍDA: Quantidade de celula na reta X
     */
@@ -169,8 +169,8 @@ class Tabuleiro{
     /*
     * DESCR: O método getLimiteY() retorna o limite de criação de celula
     * na reta X passado para o parametro
-    * AUTOR: 
-    * HORAS: --
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 1
     * ENTRADA: S/ENTRADA
     * SAÍDA: Quantidade de celula na reta Y
     */
