@@ -17,11 +17,12 @@ class Terreno implements Celula{
         $this->idTerreno["x"] = $x;
         $this->idTerreno["y"] = $y;
     }
+    
     /*
     * DESCR: O método getImg() retorna a imagem que será usada na tela 
     * para a célula Terreno
-    * AUTOR: 
-    * HORAS: --
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 1
     * ENTRADA: S/ENTRADA
     * SAÍDA: Caminho da Imagem
     */
@@ -32,8 +33,8 @@ class Terreno implements Celula{
     /*
     * DESCR: O método existeObstaculo() retorna um booleano indicando 
     * se é a celula referida é um obstaculo ou não
-    * AUTOR: 
-    * HORAS: --
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 1
     * ENTRADA: S/ENTRADA
     * SAÍDA: Booleano
     */
@@ -43,8 +44,8 @@ class Terreno implements Celula{
     
     /*
     * DESCR: O método getId() retorna a posição do Terreno no tabuleiro
-    * AUTOR: 
-    * HORAS: --
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 1
     * ENTRADA: S/ENTRADA
     * SAÍDA: Posição do Terreno
     */
