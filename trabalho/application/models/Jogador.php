@@ -113,6 +113,22 @@ abstract class Jogador{
         $this->movimentar($novaPosicao, $ObX, $ObY);
     }
     
+    /*
+    * DESCR: O método movimentarBaixo() tem a função de movimentar 
+    * o objeto jogador para baixo da posição atual em que ele está,
+    * essa função chama outra chamada movimentar()
+    * AUTOR: 
+    * HORAS: --
+    * ENTRADA: Array de obstáculos na posição X, Array de obstáculos na posição Y
+    * SAÍDA: S/SAÍDA
+    */
+    public function movimentarBaixo($ObX, $ObY){
+        $novaPosicao = array();
+        $novaPosicao["x"] = $this->posicaoAtual["x"] + 1;
+        $novaPosicao["y"] = $this->posicaoAtual["y"];
+        $this->movimentar($novaPosicao, $ObX, $ObY);
+    }
+    
         /*
     * DESCR: O método getVida() retorna a vida total(original) do jogador
     * AUTOR: Nathan Caraviello Couto
