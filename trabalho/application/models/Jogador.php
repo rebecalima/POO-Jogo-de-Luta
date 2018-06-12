@@ -8,6 +8,28 @@ abstract class Jogador{
     private $posicaoAtual = array();
     private $inventario = array();
     
+       /*
+    * DESCR: O método Combater() é um método abstrato da classe Jogador 
+    * que está somente assinado e será sobrescrito nas classes filhas,
+    * tem a funçao de combater o outro jogador
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 1
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: S/SAÍDA
+    */
+    public abstract function combater();
+    
+    /*
+    * DESCR: O método Defender() é um método abstrato da classe Jogador 
+    * que está somente assinado e será sobrescrito pelas classes filhas,
+    * tem a função de defender-se do ataque do outro jogador
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 1
+    * ENTRADA: Ataque do item, jogador de Defesa
+    * SAÍDA: S/SAÍDA
+    */
+    public abstract function defender($ataque, $jogadorDefesa);
+    
     /*
     * DESCR: O método RegistraDano() é um método da classe Jogador 
     * que registra o dano causado pela ataque da arma do outro jogador,
@@ -18,6 +40,7 @@ abstract class Jogador{
     * ENTRADA: Dano(ataque da arma), jogador de Defesa, vida do Jogador
     * SAÍDA: Vida
     */
+    
     public function registrarDano($dano, $jogadorDefesa, $vida){
         if($vida <= $dano){
             $this->morrer($jogadorDefesa);
@@ -83,3 +106,6 @@ abstract class Jogador{
     * SAÍDA: S/SAÍDA
     */
     public abstract function getJogador();
+    
+}
+?>
