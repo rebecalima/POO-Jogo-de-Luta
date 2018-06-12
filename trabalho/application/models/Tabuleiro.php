@@ -33,6 +33,40 @@ class Tabuleiro{
         $this->insereJogador();
     }
     
+    /*
+    * DESCR: O método insereJogador1() tem a função de inserir o primeiro
+    * jogador passado por parâmetro no tabuleiro nas primeira posições,
+    * chamando a função existeObstaculo
+    * para impedir de ele ser inserido em cima do obstaculo
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 2
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: S/SAÍDA
+    */
+    public function insereJogador1(){
+        /*Inserção do Jogador 01 no Tabuleiro*/
+        $x=0;
+        $y=0;
+
+        while($x < $this->limiteX){
+            while($y <= $this->limiteY){
+                if(!$this->arrayCelulas[$x][$y]->existeObstaculo()){
+                    $posicaoInicial["x"] = $x;
+                    $posicaoInicial["y"] = $y;
+                    $this->jogador1->movimentar($posicaoInicial, $this->obstaculoX, $this->obstaculoY);
+                    $flag = true;
+                    break;
+                }
+               $y++; 
+            }
+            if($flag){
+                break;
+            }
+            $x++;
+            $y = 0;
+        }
+    }
+    
     
 }
 
