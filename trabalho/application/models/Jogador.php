@@ -26,3 +26,17 @@ abstract class Jogador{
             return $vida;
         }
     }
+    
+    /*
+    * DESCR: O método Morrer() é chamado após um 
+    * ataque bem-sucedido do jogador contra o outro. 
+    * Este método retornará uma mensagem a ser exibida na tela
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 2
+    * ENTRADA: Jogador
+    * SAÍDA: Mensagem de Game Over
+    */
+    public function morrer($jogadorDefesa){
+        $msg = $jogadorDefesa ." MORREU!";
+        return $msg;
+    }
