@@ -3,6 +3,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class FactoryTabuleiro{
     protected static $arrayCelulas, $obstaculoX, $obstaculoY;
+    
+    /*
+    * DESCR: O método estático makeTabuleiro() tem a função de chamar os métodos
+    * makeTerreno() e makeObstaculo(), criando uma instância tabuleiro, passando
+    * os devidos argumentos para o construtor do Tabuleiro, que seria as posições
+    * dos terrenos e obstaculos
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 4
+    * ENTRADA: Jogador 1, Jogador 2
+    * SAÍDA: Tabuleiro
+    */
+    public static function makeTabuleiro(Jogador $jogador1, Jogador $jogador2){
+        $limiteX = 4;
+        $limiteY = 5;
+        $qtdObstaculo = 3;
+        $array = array();
+        self::makeTerreno($limiteX, $limiteY);
+        self::makeObstaculo($qtdObstaculo);
+        //var_dump(self::$obstaculoX);
+        //var_dump(self::$obstaculoY);
+        $tabuleiro = new Tabuleiro($jogador1, $jogador2, $limiteX, $limiteY, self::getArrayCelulas(), self::$obstaculoX, self::$obstaculoY);
+        return $tabuleiro;
+    }
+    
+    
+    
     /*
     * DESCR: O método makeTerreno() cria as instâncias do Terreno de acordo com
     * a quantidade de celulas passada por parametro
