@@ -34,6 +34,20 @@ class Tabuleiro{
     }
     
     /*
+    * DESCR: O método insereJogador() chama outros dois métodos para inserir
+    * o Jogador 1 e o Jogador 2
+    * AUTOR: 
+    * HORAS: --
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: S/SAÍDA
+    */
+    public function insereJogador(){
+        $this->insereJogador1();
+        $this->insereJogador2();
+    }
+    
+    
+    /*
     * DESCR: O método insereJogador1() tem a função de inserir o primeiro
     * jogador passado por parâmetro no tabuleiro nas primeira posições,
     * chamando a função existeObstaculo
