@@ -153,6 +153,7 @@ abstract class Jogador{
     * o jogador está livre para movimentar-se para a direção solicitada
     * AUTOR: Daniel Pereira Zitei
     * HORAS: 2
+    
     * ENTRADA: Posição solicitada, Array de obstáculos na posição X, Array de obstáculos na posição Y
     * SAÍDA: Booleano
     */
