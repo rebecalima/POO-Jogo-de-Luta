@@ -19,5 +19,18 @@ class Assassino extends Jogador{
         $this->inventario["arma2"] = $arma2;
         $this->inventario["armadura"] = $armadura;
     }
+    /*
+    * DESCR: O método combater() é chamado pela classe combate após uma ação 
+    * do usuário contra o adversário. É feita a soma dos ataques das armas do
+    * assassino e retornado a soma
+    * AUTOR: Daniel Pereira Zitei
+    * HORAS: 1
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: Soma de Ataque
+    */
+    public function combater(){
+        $somaAtaque = $this->inventario["arma"]->ataque + $this->inventario["arma2"]->ataque;
+        return $somaAtaque;
+    }
 }  
 ?>
