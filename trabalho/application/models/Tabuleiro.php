@@ -67,6 +67,43 @@ class Tabuleiro{
         }
     }
     
+    /*
+    * DESCR: O método insereJogador2() tem a função de inserir o segundo
+    * jogador passado por parâmetro no tabuleiro nas ultimas posições,
+    * chamando a função existeObstaculo
+    * para impedir de ele ser inserido em cima do obstaculo
+    * AUTOR: Rebeca Lima Gomes
+    * HORAS: 2
+    * ENTRADA: S/ENTRADA
+    * SAÍDA: S/SAÍDA
+    */
+    public function insereJogador2(){
+        /*Inserção do Jogador 02 no Tabuleiro*/
+        $x=3;
+        $y=4;
+
+        while($x > 0){
+            
+            while($y > 0){
+                //var_dump($this->arrayCelulas[3][2]);
+                if(!$this->arrayCelulas[$x][$y]->existeObstaculo()){
+                    //var_dump($y);
+                    $posicaoInicial["x"] = $x;
+                    $posicaoInicial["y"] = $y;
+                    $this->jogador2->movimentar($posicaoInicial, $this->obstaculoX, $this->obstaculoY);
+                    $flag = true;
+                    break;
+                }
+               $y--; 
+            }
+            if($flag){
+                break;
+            }
+            $x--;
+            $y = 5;
+        }
+    }
+    
     
 }
 
