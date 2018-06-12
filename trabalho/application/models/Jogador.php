@@ -146,6 +146,33 @@ abstract class Jogador{
         }
     }
     
+    /*
+    * DESCR: O método validarMovimento() tem a função de verificar         
+    * se há obstáculo ou se não existe célula. Caso um dos dois seja verdadeiro, 
+    * o jogador não se movimenta, se ambos forem falso
+    * o jogador está livre para movimentar-se para a direção solicitada
+    * AUTOR: Daniel Pereira Zitei
+    * HORAS: 2
+    * ENTRADA: Posição solicitada, Array de obstáculos na posição X, Array de obstáculos na posição Y
+    * SAÍDA: Booleano
+    */
+    public function validarMovimento($novaPosicao, $ObX, $ObY){
+
+        if(($novaPosicao["x"] >= 0 && $novaPosicao["x"] < 5)&&
+           ($novaPosicao["y"] >= 0 && $novaPosicao["y"] < 6)){
+               
+               for($i = 0; $i < count($ObX); $i++){
+                   if($ObX[$i] == $novaPosicao['x'] && 
+                        $ObY[$i] == $novaPosicao['y']){
+                            return false;
+                    }
+               }
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
         /*
     * DESCR: O método getVida() retorna a vida total(original) do jogador
     * AUTOR: Nathan Caraviello Couto
