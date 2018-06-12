@@ -39,6 +39,27 @@ class Combate{
         return $this->jogador2;
     }
     
+    /*
+    * DESCR: O método atacar() ataca o outro jogador.
+    * Primeiro é chamado o método verificarAlcance(), se for verdadeiro,
+    * o método combater do jogador é chamado e lá é feito realmente o ataque, 
+    * subtraindo o dano de ataque da arma da vida do inimigo, se for falso,
+    * ele irá retornar uma mensagem de erro dizendo que o inimigo está fora de alcance
+    * AUTOR: Nathan Caraviello Couto
+    * HORAS: 2
+    * ENTRADA: Jogador de Ataque, Jogador de Defesa
+    * SAÍDA: Mensagem de 'erro'
+    */
+    public function atacar(Jogador $jogadorAtaque, Jogador $jogadorDefesa){
+        if($this->verificarAlcance($jogadorAtaque, $jogadorDefesa)){
+            $ataque = $jogadorAtaque->combater();
+            $jogadorDefesa->defender($ataque, $jogadorDefesa->nome);
+            return $ataque;
+        }else{
+            return "Fora de alcance!";
+        }
+    }
+    
 }
 
 ?>
